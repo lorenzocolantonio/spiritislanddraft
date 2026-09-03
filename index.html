@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Estrai casualmente gli Spiriti principali di Spirit Island." />
+    <title>Spirit Draft · Spirit Island</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">SPIRIT ISLAND · DRAFT CASUALE</p>
+        <h1>Chi difenderà<br />l'isola?</h1>
+        <p class="intro">Estrai Spiriti principali senza duplicati. Puoi limitare l'estrazione alle espansioni che possiedi.</p>
+      </header>
+
+      <section class="draft-panel" aria-labelledby="draft-title">
+        <div class="panel-title">
+          <p class="section-label">Configurazione</p>
+          <h2 id="draft-title">Componi il draft</h2>
+        </div>
+
+        <div class="quantity-row">
+          <label for="quantity">Numero di Spiriti</label>
+          <div class="stepper">
+            <button class="stepper-button" type="button" data-step="-1" aria-label="Diminuisci il numero">−</button>
+            <input id="quantity" name="quantity" type="number" min="1" value="4" inputmode="numeric" />
+            <button class="stepper-button" type="button" data-step="1" aria-label="Aumenta il numero">+</button>
+          </div>
+        </div>
+
+        <fieldset class="expansions">
+          <legend>Spiriti disponibili</legend>
+          <div id="expansion-options" class="expansion-options"></div>
+        </fieldset>
+
+        <p id="availability" class="availability" aria-live="polite"></p>
+        <button id="draw-button" class="draw-button" type="button">Estrai gli Spiriti <span aria-hidden="true">✦</span></button>
+      </section>
+
+      <section id="results-section" class="results" aria-live="polite" aria-labelledby="results-title" hidden>
+        <div class="results-heading">
+          <div>
+            <p class="section-label">Il tuo draft</p>
+            <h2 id="results-title">Gli Spiriti rispondono alla chiamata</h2>
+          </div>
+          <button id="redraw-button" class="text-button" type="button">Rimescola</button>
+        </div>
+        <div id="results-grid" class="results-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      Fan tool non ufficiale. Le immagini e i nomi degli Spiriti appartengono ai rispettivi titolari. Schede e immagini provengono da <a href="https://spiritislandwiki.com/index.php?title=All_Spirits" target="_blank" rel="noreferrer">Spirit Island Wiki</a>.
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
